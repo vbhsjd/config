@@ -20,6 +20,9 @@ set ttyfast
 colorscheme zellner
 set scrolloff=5
 
+" vim 复制到系统剪贴板
+set clipboard=unnamed
+
 "  插件
 call plug#begin('~/.vim/plugged')
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
