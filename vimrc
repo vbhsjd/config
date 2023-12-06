@@ -17,6 +17,7 @@ syntax on
 set ttyfast
 colorscheme zellner
 set scrolloff=5
+set hlsearch
 
 " vim 复制到系统剪贴板
 set clipboard=unnamed
