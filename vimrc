@@ -5,8 +5,6 @@ set expandtab
 set number
 " 开启自动缩进
 set autoindent
-" 开启智能缩进
-set smartindent
 " 开启自动换行
 set wrap
 " 保持与上一行的缩进相同
