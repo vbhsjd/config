@@ -8,6 +8,8 @@ abbr cls 'clear'
 abbr vimrc 'vim ~/.vimrc'
 abbr config.fish 'vim ~/.config/fish/config.fish'
 abbr hosts 'sudo vim /etc/hosts'
+abbr ls 'ls -F'
+abbr ll 'ls -thF -lT'
 
 # 禁用homebrew自动更新
 set -gx HOMEBREW_NO_AUTO_UPDATE 1
