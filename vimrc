@@ -18,6 +18,7 @@ set ttyfast
 colorscheme zellner
 set scrolloff=5
 set hlsearch
+set backspace=indent,eol,start
 
 " vim 复制到系统剪贴板
 set clipboard=unnamed
