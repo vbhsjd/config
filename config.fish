@@ -10,6 +10,7 @@ abbr config.fish 'vim ~/.config/fish/config.fish'
 abbr hosts 'sudo vim /etc/hosts'
 abbr ls 'ls -F'
 abbr ll 'ls -thF -lT'
+abbr echo 'echo -n'
 
 # 禁用homebrew自动更新
 set -gx HOMEBREW_NO_AUTO_UPDATE 1
