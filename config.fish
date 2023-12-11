@@ -9,9 +9,15 @@ abbr vimrc 'vim ~/.vimrc'
 abbr config.fish 'vim ~/.config/fish/config.fish'
 abbr hosts 'sudo vim /etc/hosts'
 abbr ls 'ls -F'
-abbr ll 'ls -thF -lT'
+# time human filetype
+abbr ll 'ls -lthF'
 abbr echo 'echo -n'
 abbr testCode 'cd /Users/wsy/testCode'
+
+if status is-interactive
+    #run a command every login
+    neofetch
+end
 
 # 禁用homebrew自动更新
 set -gx HOMEBREW_NO_AUTO_UPDATE 1
@@ -72,21 +78,3 @@ function bd
         echo "Directory not found."
     end
 end
-
-
-# 用于替代grep
-#function f
-#    # 如果提供了文件名作为参数
-#    if test (count $argv) -gt 0
-#        set filename $argv[1]
-#        cat $filename | fzf --tac --multi
-#    else
-#        set selected_file (fzf --preview 'bat {}')
-#        if test -n "$selected_file"
-#            cat $selected_file | fzf --tac --multi
-#        end
-#    end
-#end
-
-# 每次打开终端先执行neofetch
-neofetch
