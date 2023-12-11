@@ -11,6 +11,7 @@ abbr hosts 'sudo vim /etc/hosts'
 abbr ls 'ls -F'
 abbr ll 'ls -thF -lT'
 abbr echo 'echo -n'
+abbr testCode 'cd /Users/wsy/testCode'
 
 # 禁用homebrew自动更新
 set -gx HOMEBREW_NO_AUTO_UPDATE 1
