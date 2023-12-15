@@ -34,6 +34,7 @@ function c
     cd (dirname (fzf --preview 'bat {}'))
 end
 
+# fd -t file argument | fzf | xargs vim --not-a-term
 function v
     cd ~/Desktop
 
