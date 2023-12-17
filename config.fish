@@ -7,7 +7,6 @@ abbr hosts 'sudo vim /etc/hosts'
 abbr ls 'ls -F'
 # time human filetype
 abbr ll 'ls -lthF'
-abbr echo 'echo -n'
 abbr testCode 'cd /Users/wsy/testCode'
 
 if status is-interactive
