@@ -1,7 +1,3 @@
-# maven
-set -x MAVEN_HOME /Users/wsy/apache-maven-3.9.5
-set -x PATH $MAVEN_HOME/bin $PATH
-
 # alias cls=clear
 abbr cls 'clear'
 
