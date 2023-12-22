@@ -1,4 +1,7 @@
+syntax enable
+filetype plugin indent on
 set ruler
+set showcmd
 set tabstop=4
 set shiftwidth=4
 " 使用制表符代替空格
