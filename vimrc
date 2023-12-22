@@ -1,3 +1,4 @@
+set ruler
 set tabstop=4
 set shiftwidth=4
 " 使用制表符代替空格
