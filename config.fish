@@ -17,6 +17,8 @@ end
 # 禁用homebrew自动更新
 set -gx HOMEBREW_NO_AUTO_UPDATE 1
 
+set -Ux EDITOR vim
+
 function c
     # 如果提供了目录就先到这个目录
     if set -q argv[1]

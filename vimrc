@@ -1,3 +1,6 @@
+"  启用鼠标 方便 tab 切换
+set mouse=a
+set nocompatible
 syntax enable
 filetype plugin indent on
 set ruler
