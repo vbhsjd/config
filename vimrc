@@ -1,3 +1,5 @@
+"  断词
+set linebreak
 "  启用鼠标 方便 tab 切换
 set mouse=a
 set nocompatible
@@ -5,7 +7,7 @@ syntax enable
 filetype plugin indent on
 set ruler
 set showcmd
-set tabstop=4
+set softtabstop=4
 set shiftwidth=4
 " 使用制表符代替空格
 set expandtab
@@ -16,8 +18,8 @@ set autoindent
 set wrap
 " 保持与上一行的缩进相同
 set shiftround
-" 搜索时不区分大小写
-set ignorecase
+" 搜索时智能区分大小写
+set smartcase
 " 语法高亮
 syntax on
 "  加快滑动速度
