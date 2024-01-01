@@ -17,7 +17,7 @@ set autoindent
 " 开启自动换行
 set wrap
 " 保持与上一行的缩进相同
-set shiftround
+" set shiftround
 " 搜索时智能区分大小写
 set smartcase
 " 语法高亮
