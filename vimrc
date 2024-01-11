@@ -18,8 +18,7 @@ set autoindent
 set wrap
 " 保持与上一行的缩进相同
 " set shiftround
-" 搜索时智能区分大小写
-set smartcase
+set ignorecase
 " 语法高亮
 syntax on
 "  加快滑动速度
