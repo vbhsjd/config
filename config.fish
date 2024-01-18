@@ -3,6 +3,7 @@ abbr cls 'clear'
 
 abbr vimrc 'vim ~/.vimrc'
 abbr config.fish 'vim ~/.config/fish/config.fish'
+# visudo
 abbr hosts 'sudo view /etc/hosts'
 abbr ls 'ls -F'
 # time human filetype
