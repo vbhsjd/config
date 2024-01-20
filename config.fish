@@ -1,24 +1,28 @@
-# alias cls=clear
-abbr cls 'clear'
+# 1. Environment variables
+set -gx HOMEBREW_NO_AUTO_UPDATE 1
+set -Ux EDITOR vim
 
-abbr vimrc 'vim ~/.vimrc'
-abbr config.fish 'vim ~/.config/fish/config.fish'
-# visudo
-abbr hosts 'sudo view /etc/hosts'
-abbr ls 'ls -F'
+# 2. Alias
+alias a alias
+alias cls 'clear'
+alias ls 'ls -F --color'
 # time human filetype
-abbr ll 'ls -lthF'
-abbr testCode 'cd /Users/wsy/testCode'
+alias ll 'ls -lthF --color'
+
+alias vimrc 'vim ~/.vimrc'
+alias config.fish 'vim ~/.config/fish/config.fish'
+# visudo
+alias hosts 'sudo view /etc/hosts'
+alias testCode 'cd /Users/wsy/testCode'
 
 if status is-interactive
     #run a command every login
     neofetch
 end
 
-# 禁用homebrew自动更新
-set -gx HOMEBREW_NO_AUTO_UPDATE 1
-
-set -Ux EDITOR vim
+#function goodbye --on-event exit
+#   echo "情绪低落可是 NoNo!"
+#end
 
 function c
     # 如果提供了目录就先到这个目录
@@ -32,7 +36,6 @@ function c
     cd (dirname (fzf --preview 'bat {}'))
 end
 
-# fd -t file argument | fzf | xargs vim --not-a-term
 function v
     cd ~/Desktop
 
