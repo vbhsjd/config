@@ -24,6 +24,7 @@ end
 #   echo "情绪低落可是 NoNo!"
 #end
 
+# 3. Functions
 function c
     # 如果提供了目录就先到这个目录
     if set -q argv[1]
@@ -79,4 +80,33 @@ function bd
         # 如果在搜索过程中未找到匹配的目录，则给出相应提示信息
         echo "Directory not found."
     end
+end
+
+function del
+    # 获取最近的 ls 命令
+    set -l last_ls (history | grep '^ls' | head -n 1)
+
+    # 检查是否找到 ls 命令
+    if test -z "$last_ls"
+        echo "没有找到最近的 ls 命令。"
+        return 1
+    end
+
+    # 替换 ls 为 rm
+    set -l cmd_rm (string replace 'ls' 'rm' -- $last_ls)
+
+    # 显示即将执行的 rm 命令
+    echo "执行: $cmd_rm"
+    eval $cmd_rm
+    echo "文件已删除。"
+
+    # 确认是否执行
+    #read -p "continue? (y/N): " confirm
+    #switch $confirm
+    #case Y y
+    #eval $cmd_rm
+    #echo "文件已删除。"
+    #case '*'
+    #echo "操作已取消。"
+    #end
 end
