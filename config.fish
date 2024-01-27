@@ -20,11 +20,46 @@ if status is-interactive
     neofetch
 end
 
+# 3.0 Functions
 #function goodbye --on-event exit
 #   echo "情绪低落可是 NoNo!"
 #end
+#function unique_by_uniq
+#    sort $argv[1] $argv[2] $argv[2] | uniq -u
+#end
+
+#function same_by_uniq
+#    sort $argv[1] $argv[2] | uniq -d
+#end
 
 # 3. Functions
+# A - B
+function unique
+    set filename1 $argv[1]
+    set filename2 $argv[2]
+
+    sort $filename1 > $filename1.sorted
+    sort $filename2 > $filename2.sorted
+
+    comm -23 $filename1.sorted $filename2.sorted
+
+    rm $filename1.sorted
+    rm $filename2.sorted
+end
+
+function same
+    set filename1 $argv[1]
+    set filename2 $argv[2]
+
+    sort $filename1 > $filename1.sorted
+    sort $filename2 > $filename2.sorted
+
+    comm -12 $filename1.sorted $filename2.sorted
+
+    rm $filename1.sorted
+    rm $filename2.sorted
+end
+
 function c
     # 如果提供了目录就先到这个目录
     if set -q argv[1]
@@ -99,14 +134,4 @@ function del
     echo "执行: $cmd_rm"
     eval $cmd_rm
     echo "文件已删除。"
-
-    # 确认是否执行
-    #read -p "continue? (y/N): " confirm
-    #switch $confirm
-    #case Y y
-    #eval $cmd_rm
-    #echo "文件已删除。"
-    #case '*'
-    #echo "操作已取消。"
-    #end
 end
