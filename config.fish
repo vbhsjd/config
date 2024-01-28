@@ -1,6 +1,7 @@
 # 1. Environment variables
 set -gx HOMEBREW_NO_AUTO_UPDATE 1
 set -Ux EDITOR vim
+set -Ux LC_COLLATE "C"
 
 # 2. Alias
 alias a alias
