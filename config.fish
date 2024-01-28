@@ -8,6 +8,7 @@ alias cls 'clear'
 alias ls 'ls -F --color'
 # time human filetype
 alias ll 'ls -lthF --color'
+alias grep 'egrep --color=auto'
 
 alias vimrc 'vim ~/.vimrc'
 alias config.fish 'vim ~/.config/fish/config.fish'
